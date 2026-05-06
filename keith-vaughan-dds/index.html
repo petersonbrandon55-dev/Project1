@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Keith E. Vaughan, DDS — Family & Cosmetic Dentistry in Yorktown, VA. Gentle, comprehensive dental care for the whole family. Call (757) 898-3366." />
+  <title>Keith E. Vaughan, DDS | Family Dentistry | Yorktown, VA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="nav__logo">
+        <span class="nav__logo-icon">&#9670;</span>
+        <div>
+          <span class="nav__logo-name">Keith E. Vaughan, DDS</span>
+          <span class="nav__logo-sub">Family &amp; Cosmetic Dentistry</span>
+        </div>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="tel:7578983366" class="btn btn--nav">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.13 19.79 19.79 0 01.22 .5 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            (757) 898-3366
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="container hero__content">
+      <span class="badge">Yorktown, VA · Since 2008</span>
+      <h1 class="hero__heading">Your Smile Deserves<br />Expert, Gentle Care</h1>
+      <p class="hero__sub">Comprehensive family and cosmetic dentistry with over 55 years of combined clinical experience — right here in Yorktown, VA.</p>
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary">Request an Appointment</a>
+        <a href="#services" class="btn btn--ghost">Explore Services</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num">55+</span>
+          <span class="stat__label">Years Combined Experience</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">4.4★</span>
+          <span class="stat__label">WebMD Rating</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">All Ages</span>
+          <span class="stat__label">Welcome</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <section class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Accepting New Patients</span>
+      </div>
+      <div class="trust-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Same-Day Emergency Care</span>
+      </div>
+      <div class="trust-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg>
+        <span>Most Insurance Accepted</span>
+      </div>
+      <div class="trust-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Flexible Appointment Times</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container about__grid">
+      <div class="about__image-wrap">
+        <div class="about__image-placeholder">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span>Dr. Vaughan</span>
+        </div>
+        <div class="about__badge-float">
+          <strong>VCU School of Dentistry</strong>
+          <span>Doctor of Dental Surgery</span>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <span class="section-label">Meet Your Dentist</span>
+        <h2 class="section-title">Dr. Keith E. Vaughan, DDS</h2>
+        <p>Dr. Vaughan has been proudly serving York County and the surrounding Yorktown community since 2008. A graduate of Virginia Commonwealth University's School of Dentistry, he brings a philosophy of clear communication, clinical excellence, and genuine concern for every patient's well-being.</p>
+        <p>Whether you need a routine cleaning or a complete smile transformation, Dr. Vaughan and his experienced team take the time to understand your goals and make every visit comfortable and stress-free.</p>
+        <ul class="about__credentials">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Doctor of Dental Surgery — Virginia Commonwealth University
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Practicing in York County since 2008
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            55+ years of combined team experience
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            Comprehensive, cosmetic &amp; restorative care
+          </li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">Meet Us In Person</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section section--alt services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Comprehensive Dental Services</h2>
+        <p class="section-sub">From preventive care to advanced cosmetic treatments — all under one roof, for patients of every age.</p>
+      </div>
+
+      <div class="services__grid">
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3>Preventive Care</h3>
+          <p>Regular exams, professional cleanings, digital X-rays, and oral cancer screenings to keep your smile healthy for life.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--teal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Cosmetic Dentistry</h3>
+          <p>Porcelain veneers, professional teeth whitening, dental bonding, and smile makeovers tailored to your vision.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--navy">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Restorative Dentistry</h3>
+          <p>Crowns, bridges, dental implants, and tooth-colored fillings to restore full function and a natural appearance.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Invisalign® Clear Aligners</h3>
+          <p>Straighten your smile discreetly with custom clear aligners — no metal wires or brackets required.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--teal">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking tooth replacements that restore your confidence and chewing ability.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--navy">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>Emergency Dental Care</h3>
+          <p>Dental emergencies don't wait for business hours. Call us — we do our best to see urgent cases the same day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="section why-us" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Why Patients Choose Us</span>
+        <h2 class="section-title">Dentistry That Puts You First</h2>
+      </div>
+      <div class="why-us__grid">
+        <div class="why-card">
+          <div class="why-card__num">01</div>
+          <h3>Concern &amp; Communication</h3>
+          <p>We take time to listen, explain your options clearly, and never rush you into decisions. Your comfort and understanding matter to us.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__num">02</div>
+          <h3>Clinical Excellence</h3>
+          <p>Dr. Vaughan and his team stay current with the latest dental techniques and technology to deliver the highest standard of care.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__num">03</div>
+          <h3>Comfortable Environment</h3>
+          <p>Our welcoming office is designed to ease dental anxiety, with a friendly staff dedicated to making every visit pleasant.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card__num">04</div>
+          <h3>Convenient Location</h3>
+          <p>Easily accessible from all of Yorktown, Grafton, and the surrounding Hampton Roads communities — with ample parking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section section--alt testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Patient Reviews</span>
+        <h2 class="section-title">What Our Patients Say</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Dr. Vaughan and his staff are exceptional. He explains everything thoroughly before any procedure and has a very gentle touch. Best dental experience I've had."</p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__name">— Sarah M., Yorktown</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"I was nervous about getting a crown but the team made me feel so comfortable. Everything was explained step by step. I won't go anywhere else."</p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__name">— James R., Grafton</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Professional, clean, and friendly. Dr. Vaughan takes real pride in his work and it shows. My whole family comes here now."</p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__name">— Linda T., Newport News</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials__badge">
+        <span>4.4 / 5</span>
+        <span>Rated on WebMD</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container contact__grid">
+      <div class="contact__info">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Ready to Schedule?</h2>
+        <p>We're accepting new patients and would love to welcome you to our practice. Contact us by phone, or fill out the form and we'll get back to you promptly.</p>
+
+        <div class="contact__details">
+          <div class="contact__detail-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.13 19.79 19.79 0 01.22 .5 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:7578983366">(757) 898-3366</a>
+            </div>
+          </div>
+          <div class="contact__detail-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>Address</strong>
+              <span>6521 George Washington Memorial Hwy<br />Yorktown, VA 23692</span>
+            </div>
+          </div>
+          <div class="contact__detail-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <div>
+              <strong>Office Hours</strong>
+              <span>Mon – Fri: 8:00 AM – 5:00 PM<br />Sat – Sun: Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact__form" id="contactForm" novalidate>
+        <h3>Request an Appointment</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(757) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service">
+            <option value="">Select a service…</option>
+            <option>Routine Exam &amp; Cleaning</option>
+            <option>Teeth Whitening</option>
+            <option>Dental Implants</option>
+            <option>Invisalign®</option>
+            <option>Crown / Bridge</option>
+            <option>Cosmetic / Veneers</option>
+            <option>Emergency Care</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Any questions or special notes…"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Send Request</button>
+        <p class="form-note">We typically respond within one business day. For urgent needs, please call us directly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== MAP PLACEHOLDER ===== -->
+  <div class="map-banner">
+    <div class="container map-banner__inner">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>6521 George Washington Memorial Hwy, Yorktown, VA 23692</span>
+      <a href="https://maps.google.com/?q=6521+George+Washington+Memorial+Hwy+Yorktown+VA+23692" target="_blank" rel="noopener" class="btn btn--outline-white btn--sm">Get Directions</a>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav__logo-icon">&#9670;</span>
+        <div>
+          <strong>Keith E. Vaughan, DDS</strong>
+          <span>Family &amp; Cosmetic Dentistry · Yorktown, VA</span>
+        </div>
+      </div>
+      <nav class="footer__links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 Keith E. Vaughan, DDS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
