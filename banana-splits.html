@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banana Splits — The Ultimate Dessert</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow: #FFD93D;
+      --pink:   #FF6B9D;
+      --brown:  #7B3F00;
+      --cream:  #FFF8E7;
+      --purple: #A855F7;
+      --teal:   #14B8A6;
+      --red:    #EF4444;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #FFEAA7 0%, #FFD93D 40%, #FFA07A 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      top: -200px; right: -150px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      bottom: -100px; left: -100px;
+    }
+
+    .hero-emoji {
+      font-size: 6rem;
+      animation: bounce 2s ease-in-out infinite;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-20px); }
+    }
+
+    .hero h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(3rem, 8vw, 7rem);
+      color: var(--brown);
+      text-shadow: 4px 4px 0 rgba(255,255,255,0.5);
+      line-height: 1.1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero p {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 700;
+      color: var(--brown);
+      margin-top: 1rem;
+      opacity: 0.85;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2.5rem;
+      background: var(--brown);
+      color: #fff;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 5rem 2rem; }
+
+    .section-title {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 3rem;
+    }
+
+    /* ── WHAT IS ── */
+    .what-is {
+      background: #fff;
+    }
+
+    .what-is .section-title { color: var(--pink); }
+
+    .what-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .what-card {
+      background: var(--cream);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s;
+    }
+    .what-card:hover { transform: translateY(-6px); }
+
+    .what-card .icon { font-size: 3.5rem; display: block; margin-bottom: 1rem; }
+
+    .what-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--brown);
+      margin-bottom: 0.5rem;
+    }
+
+    .what-card p { color: #555; line-height: 1.6; }
+
+    /* ── LAYERS ── */
+    .layers {
+      background: linear-gradient(180deg, #FFF0F5 0%, #E0F7FA 100%);
+    }
+
+    .layers .section-title { color: var(--purple); }
+
+    .layers-list {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .layer-item {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+      transition: transform 0.2s;
+    }
+    .layer-item:hover { transform: translateX(6px); }
+
+    .layer-num {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .layer-item:nth-child(1) .layer-num { background: var(--yellow); color: var(--brown); }
+    .layer-item:nth-child(2) .layer-num { background: #C8A97E; }
+    .layer-item:nth-child(3) .layer-num { background: var(--pink); }
+    .layer-item:nth-child(4) .layer-num { background: #fff; color: var(--brown); border: 3px solid var(--yellow); }
+    .layer-item:nth-child(5) .layer-num { background: var(--red); }
+    .layer-item:nth-child(6) .layer-num { background: var(--teal); }
+
+    .layer-info h4 { font-size: 1.1rem; font-weight: 800; color: var(--brown); }
+    .layer-info p  { font-size: 0.95rem; color: #666; margin-top: 0.2rem; }
+
+    /* ── REASONS ── */
+    .reasons { background: var(--yellow); }
+    .reasons .section-title { color: var(--brown); }
+    .reasons .section-sub   { color: var(--brown); opacity: 0.75; }
+
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .reason-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .reason-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+
+    .reason-card .big { font-size: 2.8rem; display: block; margin-bottom: 0.8rem; }
+    .reason-card h3 { font-weight: 800; font-size: 1.15rem; color: var(--brown); margin-bottom: 0.4rem; }
+    .reason-card p  { color: #555; font-size: 0.95rem; line-height: 1.5; }
+
+    /* ── HISTORY ── */
+    .history { background: #fff; }
+    .history .section-title { color: var(--teal); }
+
+    .timeline {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 1rem;
+      top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--yellow), var(--pink), var(--purple));
+      border-radius: 4px;
+    }
+
+    .tl-event {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .tl-event::before {
+      content: '';
+      position: absolute;
+      left: -2.4rem;
+      top: 0.4rem;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: var(--pink);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px var(--pink);
+    }
+
+    .tl-year {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.4rem;
+      color: var(--pink);
+    }
+
+    .tl-event p { color: #555; line-height: 1.6; margin-top: 0.3rem; }
+
+    /* ── CTA ── */
+    .cta {
+      background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .cta h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 1.1rem 3rem;
+      background: var(--yellow);
+      color: var(--brown);
+      font-family: 'Pacifico', cursive;
+      font-size: 1.3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown);
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.95rem;
+    }
+
+    footer span { color: var(--yellow); font-weight: 800; }
+
+    /* ── FLOATING DECORATIONS ── */
+    .floater {
+      position: fixed;
+      pointer-events: none;
+      font-size: 2rem;
+      opacity: 0.12;
+      animation: float linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(100vh) rotate(0deg);   }
+      100% { transform: translateY(-10vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating background emojis -->
+  <div class="floater" style="left:5%;  animation-duration:12s; animation-delay:0s;  font-size:2.5rem;">🍌</div>
+  <div class="floater" style="left:20%; animation-duration:9s;  animation-delay:3s;">🍨</div>
+  <div class="floater" style="left:50%; animation-duration:14s; animation-delay:1s;  font-size:1.8rem;">🍒</div>
+  <div class="floater" style="left:75%; animation-duration:10s; animation-delay:5s;">🍫</div>
+  <div class="floater" style="left:90%; animation-duration:11s; animation-delay:2s;  font-size:2.2rem;">🍦</div>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <span class="hero-emoji">🍌</span>
+    <h1>Banana Splits</h1>
+    <p>The most glorious dessert ever invented by humankind.</p>
+    <a href="#what-is" class="hero-btn">Tell Me More!</a>
+  </section>
+
+  <!-- ── WHAT IS ── -->
+  <section class="what-is" id="what-is">
+    <h2 class="section-title">What Is a Banana Split?</h2>
+    <p class="section-sub">A legendary dessert that's greater than the sum of its parts.</p>
+    <div class="what-grid">
+      <div class="what-card">
+        <span class="icon">🍌</span>
+        <h3>The Star: A Banana</h3>
+        <p>A perfectly ripe banana, halved lengthwise, forms the iconic boat that holds everything together. It's not just a garnish — it's the foundation.</p>
+      </div>
+      <div class="what-card">
+        <span class="icon">🍨</span>
+        <h3>Three Scoops of Ice Cream</h3>
+        <p>Traditionally vanilla, chocolate, and strawberry. Three flavors, three personalities, one perfect dessert. The holy trinity of frozen deliciousness.</p>
+      </div>
+      <div class="what-card">
+        <span class="icon">✨</span>
+        <h3>The Ultimate Toppings</h3>
+        <p>Whipped cream, hot fudge, strawberry sauce, pineapple topping, crushed nuts, and a bright red maraschino cherry on top. Pure joy in a dish.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── LAYERS ── -->
+  <section class="layers">
+    <h2 class="section-title">Building the Perfect Split</h2>
+    <p class="section-sub">Every layer matters. Here's the sacred order.</p>
+    <div class="layers-list">
+      <div class="layer-item">
+        <div class="layer-num">1</div>
+        <div class="layer-info">
+          <h4>🍌 The Banana Base</h4>
+          <p>Peel and split a ripe banana lengthwise. Place in a long dish. This is your boat — treat it with respect.</p>
+        </div>
+      </div>
+      <div class="layer-item">
+        <div class="layer-num">2</div>
+        <div class="layer-info">
+          <h4>🍨 Three Glorious Scoops</h4>
+          <p>Nestled between the banana halves: vanilla in the middle, chocolate on one end, strawberry on the other.</p>
+        </div>
+      </div>
+      <div class="layer-item">
+        <div class="layer-num">3</div>
+        <div class="layer-info">
+          <h4>🍫 The Sauces</h4>
+          <p>Hot fudge over chocolate, strawberry sauce over strawberry, and pineapple topping over vanilla. Perfect pairing, every time.</p>
+        </div>
+      </div>
+      <div class="layer-item">
+        <div class="layer-num">4</div>
+        <div class="layer-info">
+          <h4>🍦 Whipped Cream Clouds</h4>
+          <p>A generous dollop (or three) of freshly whipped cream on each scoop. Be generous. This is not a time for restraint.</p>
+        </div>
+      </div>
+      <div class="layer-item">
+        <div class="layer-num">5</div>
+        <div class="layer-info">
+          <h4>🥜 Crushed Nuts</h4>
+          <p>A sprinkle of chopped walnuts or peanuts adds crunch and a subtle savory note that makes everything pop.</p>
+        </div>
+      </div>
+      <div class="layer-item">
+        <div class="layer-num">6</div>
+        <div class="layer-info">
+          <h4>🍒 The Crown Jewel</h4>
+          <p>Three maraschino cherries, one per scoop. Bright red, impossibly sweet. The final, triumphant flourish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REASONS ── -->
+  <section class="reasons">
+    <h2 class="section-title">Why Banana Splits Are AWESOME</h2>
+    <p class="section-sub">Let us count the ways...</p>
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <span class="big">🎨</span>
+        <h3>A Feast for the Eyes</h3>
+        <p>Three colors of ice cream, rainbow sauces, snowy whipped cream, and a ruby cherry. It's edible art.</p>
+      </div>
+      <div class="reason-card">
+        <span class="big">🌈</span>
+        <h3>Something for Everyone</h3>
+        <p>Not a chocolate person? Eat the vanilla. Watching your fruit intake? The banana counts. It's the most democratic dessert.</p>
+      </div>
+      <div class="reason-card">
+        <span class="big">🎉</span>
+        <h3>Instant Party Vibe</h3>
+        <p>You can't look at a banana split and feel sad. It's physically impossible. It radiates joy.</p>
+      </div>
+      <div class="reason-card">
+        <span class="big">🔥❄️</span>
+        <h3>Hot Meets Cold</h3>
+        <p>Warm hot fudge melting into cold ice cream creates a flavor explosion that no other dessert can replicate.</p>
+      </div>
+      <div class="reason-card">
+        <span class="big">🍌</span>
+        <h3>Fruit! It's Healthy!</h3>
+        <p>Bananas are packed with potassium and vitamins. Banana splits are therefore essentially a health food. (We stand by this.)</p>
+      </div>
+      <div class="reason-card">
+        <span class="big">📏</span>
+        <h3>Legendary Proportions</h3>
+        <p>It's served in a long dish. A LONG dish. The sheer scale of a banana split communicates that you've arrived.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HISTORY ── -->
+  <section class="history">
+    <h2 class="section-title">A Glorious History</h2>
+    <p class="section-sub">Over 120 years of pure deliciousness.</p>
+    <div class="timeline">
+      <div class="tl-event">
+        <div class="tl-year">1904</div>
+        <p>David Evans Strickler, a 23-year-old apprentice pharmacist in Latrobe, Pennsylvania, creates the first banana split for 10 cents. The world is forever changed.</p>
+      </div>
+      <div class="tl-event">
+        <div class="tl-year">1907</div>
+        <p>Wilmington, Ohio holds what is believed to be the first Banana Split Festival, solidifying its place in American dessert culture.</p>
+      </div>
+      <div class="tl-event">
+        <div class="tl-year">1920s–1950s</div>
+        <p>The golden era of the soda fountain. Banana splits become a staple at every ice cream parlor in America, a symbol of carefree joy.</p>
+      </div>
+      <div class="tl-event">
+        <div class="tl-year">1972</div>
+        <p>A world-record banana split stretching 4.55 miles is created in Selinsgrove, Pennsylvania. Ambition meets dessert.</p>
+      </div>
+      <div class="tl-event">
+        <div class="tl-year">Today</div>
+        <p>Banana splits are enjoyed worldwide, with infinite creative variations — but the classic original remains undefeated. Long may it reign.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="cta">
+    <h2>Ready for the Best Dessert of Your Life?</h2>
+    <p>Stop reading. Go make a banana split. You deserve it. The bananas are waiting.</p>
+    <a href="#what-is" class="cta-btn">🍌 Let's Do This!</a>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>Made with <span>🍌 pure banana love 🍌</span> &mdash; Banana Splits: Always Awesome, Always.</p>
+  </footer>
+
+</body>
+</html>
